@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="net.beridar.Bouquet_of_Pain">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="net.beridar.Bouquet_of_Pain" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="15" />
-	<application android:label="Bouquet of Pain">
-	</application>
+	<application android:label="Bouquet of Pain" android:icon="@drawable/xamarin_logo"></application>
 </manifest>
