@@ -11,6 +11,11 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AboutViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\RollerViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Roller.xaml.cs">
+      <DependentUpon>Roller.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\MainPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
@@ -26,5 +31,21 @@
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Models\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Roller.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)resources\1x\thrown_green_d6.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)resources\2x\thrown_green_d6.png" />
+    <Content Include="$(MSBuildThisFileDirectory)resources\3x\thrown_green_d6.png" />
+    <Content Include="$(MSBuildThisFileDirectory)resources\4x\thrown_green_d6.png" />
+    <Content Include="$(MSBuildThisFileDirectory)resources\5x\thrown_green_d6.png" />
+    <Content Include="$(MSBuildThisFileDirectory)resources\Originals\thrown_green_d6.png" />
   </ItemGroup>
 </Project>
