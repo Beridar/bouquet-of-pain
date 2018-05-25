@@ -1,6 +1,4 @@
-﻿using System;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace BouquetOfPain
 {
@@ -21,13 +19,13 @@ namespace BouquetOfPain
                     break;
 
                 default:
-                    aboutPage = new AboutPage()
+                    aboutPage = new AboutPage
                     {
                         Title = "About"
                     };
                     break;
             }
-            
+
             Children.Add(aboutPage);
 
             Title = Children[0].Title;
