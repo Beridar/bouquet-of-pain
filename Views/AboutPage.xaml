@@ -25,11 +25,29 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Icons made by " />
-                                <Span Text="http://www.freepik.com"/>
+                                <Span Text="http://www.freepik.com"
+                                      Style="{StaticResource TappableUrl}">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding OpenUrl}"
+                                                              CommandParameter="http://www.freepik.com" />
+                                    </Span.GestureRecognizers>
+                                </Span>
                                 <Span Text=" from " />
-                                <Span Text="https://www.flaticon.com/" />
+                                <Span Text="https://www.flaticon.com/"
+                                      Style="{StaticResource TappableUrl}">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding OpenUrl}"
+                                                              CommandParameter="https://www.flaticon.com" />
+                                    </Span.GestureRecognizers>
+                                </Span>
                                 <Span Text=" is licensed by " />
-                                <Span Text="http://creativecommons.org/licenses/by/3.0/" />
+                                <Span Text="http://creativecommons.org/licenses/by/3.0/"
+                                      Style="{StaticResource TappableUrl}">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding OpenUrl}"
+                                                              CommandParameter="http://creativecommons.org/licenses/by/3.0/" />
+                                    </Span.GestureRecognizers>
+                                </Span>
                                 <Span Text=" CC 3.0 BY." />
                             </FormattedString>
                         </Label.FormattedText>

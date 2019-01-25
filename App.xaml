@@ -4,6 +4,7 @@
              x:Class="BouquetOfPain.App">
     <Application.Resources>
         <ResourceDictionary>
+            <Color x:Key="TappableBlue">#3333FF</Color>
             <Color x:Key="Primary">#2196F3</Color>
             <Color x:Key="PrimaryDark">#1976D2</Color>
             <Color x:Key="Accent">#96d1ff</Color>
@@ -14,6 +15,12 @@
             <Style TargetType="NavigationPage">
                 <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />
                 <Setter Property="BarTextColor" Value="White" />
+            </Style>
+
+            <Style x:Key="TappableUrl"
+                   TargetType="Span">
+                <Setter Property="TextColor" Value="{StaticResource TappableBlue}" />
+                <Setter Property="TextDecorations" Value="Underline" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>
