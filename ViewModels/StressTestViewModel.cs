@@ -10,28 +10,29 @@ namespace BouquetOfPain
     public class StressTestViewModel : BaseViewModel
     {
         private readonly Roller randomNumberGenerator;
+        private int totalResultCount;
         private Dictionary<int, int> allResults;
 
-        public string Results_01 => allResults[01].ToString();
-        public string Results_02 => allResults[02].ToString();
-        public string Results_03 => allResults[03].ToString();
-        public string Results_04 => allResults[04].ToString();
-        public string Results_05 => allResults[05].ToString();
-        public string Results_06 => allResults[06].ToString();
-        public string Results_07 => allResults[07].ToString();
-        public string Results_08 => allResults[08].ToString();
-        public string Results_09 => allResults[09].ToString();
-        public string Results_10 => allResults[10].ToString();
-        public string Results_11 => allResults[11].ToString();
-        public string Results_12 => allResults[12].ToString();
-        public string Results_13 => allResults[13].ToString();
-        public string Results_14 => allResults[14].ToString();
-        public string Results_15 => allResults[15].ToString();
-        public string Results_16 => allResults[16].ToString();
-        public string Results_17 => allResults[17].ToString();
-        public string Results_18 => allResults[18].ToString();
-        public string Results_19 => allResults[19].ToString();
-        public string Results_20 => allResults[20].ToString();
+        public string Results_01 => CalculatePercentageFor(allResults[01]);
+        public string Results_02 => CalculatePercentageFor(allResults[02]);
+        public string Results_03 => CalculatePercentageFor(allResults[03]);
+        public string Results_04 => CalculatePercentageFor(allResults[04]);
+        public string Results_05 => CalculatePercentageFor(allResults[05]);
+        public string Results_06 => CalculatePercentageFor(allResults[06]);
+        public string Results_07 => CalculatePercentageFor(allResults[07]);
+        public string Results_08 => CalculatePercentageFor(allResults[08]);
+        public string Results_09 => CalculatePercentageFor(allResults[09]);
+        public string Results_10 => CalculatePercentageFor(allResults[10]);
+        public string Results_11 => CalculatePercentageFor(allResults[11]);
+        public string Results_12 => CalculatePercentageFor(allResults[12]);
+        public string Results_13 => CalculatePercentageFor(allResults[13]);
+        public string Results_14 => CalculatePercentageFor(allResults[14]);
+        public string Results_15 => CalculatePercentageFor(allResults[15]);
+        public string Results_16 => CalculatePercentageFor(allResults[16]);
+        public string Results_17 => CalculatePercentageFor(allResults[17]);
+        public string Results_18 => CalculatePercentageFor(allResults[18]);
+        public string Results_19 => CalculatePercentageFor(allResults[19]);
+        public string Results_20 => CalculatePercentageFor(allResults[20]);
 
         public ICommand StartRolling { get; }
         public ICommand StopRolling { get; }
@@ -68,7 +69,9 @@ namespace BouquetOfPain
 
             while (continueRolling)
             {
-                var nextResults = randomNumberGenerator.Roll(100, 20);
+                var nextResults = randomNumberGenerator.Roll(1000, 20);
+
+                totalResultCount += nextResults.Rolls.Length;
 
                 foreach (var key in allResults.Keys.ToArray())
                     allResults[key] += nextResults.Rolls.Count(x => x == key);
@@ -78,6 +81,13 @@ namespace BouquetOfPain
 
                 await Task.Delay(10);
             }
+        }
+
+        private string CalculatePercentageFor(int oneResultCount)
+        {
+            var percentage = 1.0f * oneResultCount / totalResultCount;
+
+            return $"{oneResultCount:N0} ({percentage:P4})";
         }
 
         private void ExecuteStopRolling()
