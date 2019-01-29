@@ -70,13 +70,13 @@ namespace BouquetOfPain
             {
                 var nextResults = randomNumberGenerator.Roll(100, 20);
 
-                foreach (var key in allResults.Keys)
+                foreach (var key in allResults.Keys.ToArray())
                     allResults[key] += nextResults.Rolls.Count(x => x == key);
 
                 foreach (var updatedCount in nameOfAllProperties)
                     OnPropertyChanged(updatedCount);
 
-                await Task.Delay(100);
+                await Task.Delay(10);
             }
         }
 
