@@ -13,6 +13,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AboutViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\RollerViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\StressTestViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Roller.xaml.cs">
       <DependentUpon>Roller.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -23,6 +24,10 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\StressTestPage.xaml.cs">
+      <DependentUpon>StressTestPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -47,5 +52,11 @@
     <Content Include="$(MSBuildThisFileDirectory)resources\4x\thrown_green_d6.png" />
     <Content Include="$(MSBuildThisFileDirectory)resources\5x\thrown_green_d6.png" />
     <Content Include="$(MSBuildThisFileDirectory)resources\Originals\thrown_green_d6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\StressTestPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

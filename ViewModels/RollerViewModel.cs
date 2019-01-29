@@ -19,11 +19,7 @@ namespace BouquetOfPain.ViewModels
         public string Result
         {
             get => result;
-            private set
-            {
-                result = value;
-                OnPropertyChanged(nameof(Result));
-            }
+            private set => SetProperty(ref result, value);
         }
 
         private readonly Roller randomNumberGenerator;

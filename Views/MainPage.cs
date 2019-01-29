@@ -9,11 +9,17 @@ namespace BouquetOfPain
         public MainPage()
         {
             Page rollerPage;
+            Page stressTestPage;
             Page aboutPage;
 
             rollerPage = new Roller
             {
                 Title = "Roll"
+            };
+
+            stressTestPage = new StressTestPage
+            {
+                Title = "Stress test"
             };
 
             aboutPage = new AboutPage
@@ -24,6 +30,7 @@ namespace BouquetOfPain
             var allPages = new[]
             {
                 rollerPage,
+                stressTestPage,
                 aboutPage,
             };
 
