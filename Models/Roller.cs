@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Xamarin.Forms.Internals;
 
 namespace BouquetOfPain.Models
 {
@@ -23,9 +22,10 @@ namespace BouquetOfPain.Models
         {
             if (dice <= 0) throw new ArgumentException($"{nameof(dice)} must be greater than zero.");
             if (sides <= 0) throw new ArgumentException($"{nameof(sides)} must be greater than zero.");
+            if (sides == int.MaxValue) throw new ArgumentException($"{nameof(sides)} must be less than int.MaxValue");
 
             var rolls = Enumerable.Range(1, dice)
-                .Select(x => rng.Next(1, sides))
+                .Select(x => rng.Next(1, sides + 1))
                 .ToArray();
 
             return new Result(rolls);
