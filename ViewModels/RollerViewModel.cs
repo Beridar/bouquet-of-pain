@@ -35,6 +35,9 @@ namespace BouquetOfPain.ViewModels
             Roll = new Command(ExecuteRoll);
 
             randomNumberGenerator = new Roller();
+
+            SelectedDice = DiceOptions.FirstOrDefault();
+            SelectedSize = DiceSizes.FirstOrDefault();
         }
 
         private void ExecuteRoll()
