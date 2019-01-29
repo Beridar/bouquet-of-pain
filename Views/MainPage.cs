@@ -1,4 +1,5 @@
-﻿using BouquetOfPain.Views;
+﻿using System.Linq;
+using BouquetOfPain.Views;
 using Xamarin.Forms;
 
 namespace BouquetOfPain
@@ -8,38 +9,29 @@ namespace BouquetOfPain
         public MainPage()
         {
             Page aboutPage;
-            Page roller;
+            Page rollerPage;
 
-            switch (Device.RuntimePlatform)
+            aboutPage = new AboutPage
             {
-                case Device.iOS:
-                    aboutPage = new NavigationPage(new AboutPage())
-                    {
-                        Title = "About"
-                    };
-                    aboutPage.Icon = "tab_about.png";
+                Title = "About"
+            };
 
-                    roller = new NavigationPage(new Roller())
-                    {
-                        Title = "Roll them bones"
-                    };
-                    break;
+            rollerPage = new Roller
+            {
+                Title = "Roll them bones"
+            };
 
-                default:
-                    aboutPage = new AboutPage
-                    {
-                        Title = "About"
-                    };
+            var allPages = new[]
+            {
+                aboutPage,
+                rollerPage,
+            };
 
-                    roller = new Roller
-                    {
-                        Title = "Roll them bones"
-                    };
-                    break;
-            }
+            if (Device.RuntimePlatform == Device.iOS)
+                allPages = allPages.Select(x => (Page)new NavigationPage(x) {Title = x.Title}).ToArray();
 
-            Children.Add(aboutPage);
-            Children.Add(roller);
+            foreach (var child in allPages)
+                Children.Add(child);
 
             Title = Children[0].Title;
         }
