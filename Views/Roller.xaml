@@ -15,7 +15,8 @@
             <Picker x:Name="Size"
                     ItemsSource="{Binding DiceSizes}"
                     SelectedItem="{Binding SelectedSize}" />
-            <Button Command="{Binding Roll}" />
+            <Button Command="{Binding Roll}"
+                    Text="Roll" />
             <Label x:Name="Result" Text="{Binding Result}" />
         </StackLayout>
     </ContentPage.Content>
