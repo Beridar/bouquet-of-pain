@@ -1,8 +1,22 @@
 ﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:BouquetOfPain.ViewModels;assembly=BouquetOfPain.Droid"
              x:Class="BouquetOfPain.Views.Roller">
+    <ContentPage.BindingContext>
+        <viewModels:RollerViewModel />
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
+            <Label Text="Dice" />
+            <Picker x:Name="Dice"
+                    ItemsSource="{Binding DiceOptions}"
+                    SelectedItem="{Binding SelectedDice}" />
+            <Label Text="Size" />
+            <Picker x:Name="Size"
+                    ItemsSource="{Binding DiceSizes}"
+                    SelectedItem="{Binding SelectedSize}" />
+            <Button Command="{Binding Roll}" />
+            <Label x:Name="Result" Text="{Binding Result}" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
