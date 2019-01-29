@@ -38,8 +38,6 @@ namespace BouquetOfPain
             return true;
         }
 
-        #region INotifyPropertyChanged
-
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
@@ -50,7 +48,5 @@ namespace BouquetOfPain
 
             changed.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
-        #endregion
     }
 }

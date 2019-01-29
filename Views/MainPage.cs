@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using BouquetOfPain.Views;
+using Xamarin.Forms;
 
 namespace BouquetOfPain
 {
@@ -7,6 +8,7 @@ namespace BouquetOfPain
         public MainPage()
         {
             Page aboutPage;
+            Page roller;
 
             switch (Device.RuntimePlatform)
             {
@@ -16,6 +18,11 @@ namespace BouquetOfPain
                         Title = "About"
                     };
                     aboutPage.Icon = "tab_about.png";
+
+                    roller = new NavigationPage(new Roller())
+                    {
+                        Title = "Roll them bones"
+                    };
                     break;
 
                 default:
@@ -23,10 +30,16 @@ namespace BouquetOfPain
                     {
                         Title = "About"
                     };
+
+                    roller = new Roller
+                    {
+                        Title = "Roll them bones"
+                    };
                     break;
             }
 
             Children.Add(aboutPage);
+            Children.Add(roller);
 
             Title = Children[0].Title;
         }
