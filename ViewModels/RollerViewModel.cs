@@ -4,7 +4,7 @@ using System.Windows.Input;
 using BouquetOfPain.Models;
 using Xamarin.Forms;
 
-namespace BouquetOfPain.ViewModels
+namespace BouquetOfPain
 {
     public class RollerViewModel : BaseViewModel
     {

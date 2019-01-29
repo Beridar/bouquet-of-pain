@@ -1,6 +1,6 @@
 ﻿using BouquetOfPain.Models;
 
-namespace BouquetOfPain.ViewModels
+namespace BouquetOfPain
 {
     public class StressTestViewModel : BaseViewModel
     {
