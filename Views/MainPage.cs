@@ -8,23 +8,23 @@ namespace BouquetOfPain
     {
         public MainPage()
         {
-            Page aboutPage;
             Page rollerPage;
+            Page aboutPage;
+
+            rollerPage = new Roller
+            {
+                Title = "Roll"
+            };
 
             aboutPage = new AboutPage
             {
                 Title = "About"
             };
 
-            rollerPage = new Roller
-            {
-                Title = "Roll them bones"
-            };
-
             var allPages = new[]
             {
-                aboutPage,
                 rollerPage,
+                aboutPage,
             };
 
             if (Device.RuntimePlatform == Device.iOS)
