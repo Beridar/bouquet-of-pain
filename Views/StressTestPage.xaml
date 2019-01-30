@@ -1,6 +1,7 @@
 ﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:BouquetOfPain;"
+             xmlns:controls="clr-namespace:BouquetOfPain.Controls;assembly=BouquetOfPain.Droid"
              x:Class="BouquetOfPain.Views.StressTestPage">
     <ContentPage.BindingContext>
         <vm:StressTestViewModel />
@@ -63,26 +64,26 @@
                     <Label Text="18" Grid.Row="17" Grid.Column="0" />
                     <Label Text="19" Grid.Row="18" Grid.Column="0" />
                     <Label Text="20" Grid.Row="19" Grid.Column="0" />
-                    <Label Text="{Binding Results_01}" Grid.Row="00" Grid.Column="1" HorizontalTextAlignment="Center" />
-                    <Label Text="{Binding Results_02}" Grid.Row="01" Grid.Column="1" HorizontalTextAlignment="Center" />
-                    <Label Text="{Binding Results_03}" Grid.Row="02" Grid.Column="1" HorizontalTextAlignment="Center" />
-                    <Label Text="{Binding Results_04}" Grid.Row="03" Grid.Column="1" HorizontalTextAlignment="Center" />
-                    <Label Text="{Binding Results_05}" Grid.Row="04" Grid.Column="1" HorizontalTextAlignment="Center" />
-                    <Label Text="{Binding Results_06}" Grid.Row="05" Grid.Column="1" HorizontalTextAlignment="Center" />
-                    <Label Text="{Binding Results_07}" Grid.Row="06" Grid.Column="1" HorizontalTextAlignment="Center" />
-                    <Label Text="{Binding Results_08}" Grid.Row="07" Grid.Column="1" HorizontalTextAlignment="Center" />
-                    <Label Text="{Binding Results_09}" Grid.Row="08" Grid.Column="1" HorizontalTextAlignment="Center" />
-                    <Label Text="{Binding Results_10}" Grid.Row="09" Grid.Column="1" HorizontalTextAlignment="Center" />
-                    <Label Text="{Binding Results_11}" Grid.Row="10" Grid.Column="1" HorizontalTextAlignment="Center" />
-                    <Label Text="{Binding Results_12}" Grid.Row="11" Grid.Column="1" HorizontalTextAlignment="Center" />
-                    <Label Text="{Binding Results_13}" Grid.Row="12" Grid.Column="1" HorizontalTextAlignment="Center" />
-                    <Label Text="{Binding Results_14}" Grid.Row="13" Grid.Column="1" HorizontalTextAlignment="Center" />
-                    <Label Text="{Binding Results_15}" Grid.Row="14" Grid.Column="1" HorizontalTextAlignment="Center" />
-                    <Label Text="{Binding Results_16}" Grid.Row="15" Grid.Column="1" HorizontalTextAlignment="Center" />
-                    <Label Text="{Binding Results_17}" Grid.Row="16" Grid.Column="1" HorizontalTextAlignment="Center" />
-                    <Label Text="{Binding Results_18}" Grid.Row="17" Grid.Column="1" HorizontalTextAlignment="Center" />
-                    <Label Text="{Binding Results_19}" Grid.Row="18" Grid.Column="1" HorizontalTextAlignment="Center" />
-                    <Label Text="{Binding Results_20}" Grid.Row="19" Grid.Column="1" HorizontalTextAlignment="Center" />
+                    <controls:PercentageWithShader Text="{Binding Results_01}" Grid.Row="00" Grid.Column="1" />
+                    <controls:PercentageWithShader Text="{Binding Results_02}" Grid.Row="01" Grid.Column="1" />
+                    <controls:PercentageWithShader Text="{Binding Results_03}" Grid.Row="02" Grid.Column="1" />
+                    <controls:PercentageWithShader Text="{Binding Results_04}" Grid.Row="03" Grid.Column="1" />
+                    <controls:PercentageWithShader Text="{Binding Results_05}" Grid.Row="04" Grid.Column="1" />
+                    <controls:PercentageWithShader Text="{Binding Results_06}" Grid.Row="05" Grid.Column="1" />
+                    <controls:PercentageWithShader Text="{Binding Results_07}" Grid.Row="06" Grid.Column="1" />
+                    <controls:PercentageWithShader Text="{Binding Results_08}" Grid.Row="07" Grid.Column="1" />
+                    <controls:PercentageWithShader Text="{Binding Results_09}" Grid.Row="08" Grid.Column="1" />
+                    <controls:PercentageWithShader Text="{Binding Results_10}" Grid.Row="09" Grid.Column="1" />
+                    <controls:PercentageWithShader Text="{Binding Results_11}" Grid.Row="10" Grid.Column="1" />
+                    <controls:PercentageWithShader Text="{Binding Results_12}" Grid.Row="11" Grid.Column="1" />
+                    <controls:PercentageWithShader Text="{Binding Results_13}" Grid.Row="12" Grid.Column="1" />
+                    <controls:PercentageWithShader Text="{Binding Results_14}" Grid.Row="13" Grid.Column="1" />
+                    <controls:PercentageWithShader Text="{Binding Results_15}" Grid.Row="14" Grid.Column="1" />
+                    <controls:PercentageWithShader Text="{Binding Results_16}" Grid.Row="15" Grid.Column="1" />
+                    <controls:PercentageWithShader Text="{Binding Results_17}" Grid.Row="16" Grid.Column="1" />
+                    <controls:PercentageWithShader Text="{Binding Results_18}" Grid.Row="17" Grid.Column="1" />
+                    <controls:PercentageWithShader Text="{Binding Results_19}" Grid.Row="18" Grid.Column="1" />
+                    <controls:PercentageWithShader Text="{Binding Results_20}" Grid.Row="19" Grid.Column="1" />
                 </Grid>
             </ScrollView>
         </StackLayout>
