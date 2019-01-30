@@ -51,8 +51,8 @@ namespace BouquetOfPain.Controls
             set => SetValue(PercentageProperty, value);
         }
 
-        public const double MINIMUM_PERCENTAGE_TO_SHOW = 0.048;
-        public const double MAXIMUM_PERCENTAGE_TO_SHOW = 0.052;
+        public const double MINIMUM_PERCENTAGE_TO_SHOW = 0.0495;
+        public const double MAXIMUM_PERCENTAGE_TO_SHOW = 0.0505;
 
         public PercentageWithShader()
         {
@@ -67,7 +67,7 @@ namespace BouquetOfPain.Controls
 
             if (double.IsNaN(Percentage) || Percentage < MINIMUM_PERCENTAGE_TO_SHOW)
             {
-                ShaderLayoutBounds = new Rectangle(0, 0, 0, 0);
+                ShaderLayoutBounds = new Rectangle(0, 0, 0, 1);
                 ShaderBackgroundColor = Color.Transparent;
             }
 

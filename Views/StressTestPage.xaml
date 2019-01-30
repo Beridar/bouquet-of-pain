@@ -10,9 +10,11 @@
         <StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Button Command="{Binding StartRolling}"
+                        HorizontalOptions="FillAndExpand"
                         BackgroundColor="Green"
                         Text="Start Rolling" />
                 <Button Command="{Binding StopRolling}"
+                        HorizontalOptions="FillAndExpand"
                         BackgroundColor="DarkRed"
                         Text="Stop Rolling"/>
             </StackLayout>
