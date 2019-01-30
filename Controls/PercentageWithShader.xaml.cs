@@ -65,7 +65,7 @@ namespace BouquetOfPain.Controls
         {
             if (e.PropertyName != nameof(Percentage)) return;
 
-            if (Percentage < MINIMUM_PERCENTAGE_TO_SHOW)
+            if (double.IsNaN(Percentage) || Percentage < MINIMUM_PERCENTAGE_TO_SHOW)
             {
                 ShaderLayoutBounds = new Rectangle(0, 0, 0, 0);
                 ShaderBackgroundColor = Color.Transparent;
