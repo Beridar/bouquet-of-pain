@@ -3,9 +3,14 @@
              x:Class="BouquetOfPain.Controls.PercentageWithShader"
              x:Name="ThisControl">
     <ContentView.Content>
-        <StackLayout>
+        <AbsoluteLayout>
+            <BoxView BackgroundColor="{Binding ShaderBackgroundColor, Source={x:Reference ThisControl}}"
+                     AbsoluteLayout.LayoutBounds="{Binding ShaderLayoutBounds, Source={x:Reference ThisControl}}"
+                     AbsoluteLayout.LayoutFlags="SizeProportional" />
             <Label Text="{Binding Text, Source={x:Reference ThisControl}}"
-                   HorizontalTextAlignment="Center" />
-        </StackLayout>
+                   HorizontalTextAlignment="Center"
+                   AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                   AbsoluteLayout.LayoutFlags="SizeProportional" />
+        </AbsoluteLayout>
     </ContentView.Content>
 </ContentView>
