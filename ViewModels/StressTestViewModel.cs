@@ -105,7 +105,7 @@ namespace BouquetOfPain
                 foreach (var updatedCount in nameOfAllProperties)
                     OnPropertyChanged(updatedCount);
 
-                await Task.Delay(10);
+                await Task.Delay(50);
             }
         }
 
