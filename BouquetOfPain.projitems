@@ -48,12 +48,19 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)resources\1x\thrown_green_d6.png">
-    </Content>
-    <Content Include="$(MSBuildThisFileDirectory)resources\2x\thrown_green_d6.png" />
-    <Content Include="$(MSBuildThisFileDirectory)resources\3x\thrown_green_d6.png" />
-    <Content Include="$(MSBuildThisFileDirectory)resources\4x\thrown_green_d6.png" />
-    <Content Include="$(MSBuildThisFileDirectory)resources\5x\thrown_green_d6.png" />
+    <Content Include="$(MSBuildThisFileDirectory)resources\1.0x\pummeled-no-background.png" />
+    <Content Include="$(MSBuildThisFileDirectory)resources\1.0x\thrown_green_d6.png" />
+    <Content Include="$(MSBuildThisFileDirectory)resources\1.5x\pummeled-no-background.png" />
+    <Content Include="$(MSBuildThisFileDirectory)resources\1.5x\thrown_green_d6.png" />
+    <Content Include="$(MSBuildThisFileDirectory)resources\2.0x\pummeled-no-background.png" />
+    <Content Include="$(MSBuildThisFileDirectory)resources\2.0x\thrown_green_d6.png" />
+    <Content Include="$(MSBuildThisFileDirectory)resources\3.0x\pummeled-no-background.png" />
+    <Content Include="$(MSBuildThisFileDirectory)resources\3.0x\thrown_green_d6.png" />
+    <Content Include="$(MSBuildThisFileDirectory)resources\4.0x\pummeled-no-background.png" />
+    <Content Include="$(MSBuildThisFileDirectory)resources\4.0x\thrown_green_d6.png" />
+    <Content Include="$(MSBuildThisFileDirectory)resources\5.0x\pummeled-no-background.png" />
+    <Content Include="$(MSBuildThisFileDirectory)resources\5.0x\thrown_green_d6.png" />
+    <Content Include="$(MSBuildThisFileDirectory)resources\Originals\pummeled-no-background.png" />
     <Content Include="$(MSBuildThisFileDirectory)resources\Originals\thrown_green_d6.png" />
   </ItemGroup>
   <ItemGroup>
