@@ -14,12 +14,14 @@ namespace BouquetOfPain
 
             rollerPage = new Roller
             {
-                Title = "Roll"
+                Title = "Roll",
+                Icon = "thrown_green_d6"
             };
 
             stressTestPage = new StressTestPage
             {
-                Title = "Stress test"
+                Title = "Stress test",
+                Icon = "pummeled-no-background"
             };
 
             aboutPage = new AboutPage
@@ -35,7 +37,7 @@ namespace BouquetOfPain
             };
 
             if (Device.RuntimePlatform == Device.iOS)
-                allPages = allPages.Select(x => (Page)new NavigationPage(x) {Title = x.Title}).ToArray();
+                allPages = allPages.Select(x => (Page)new NavigationPage(x) {Title = x.Title, Icon = x.Icon}).ToArray();
 
             foreach (var child in allPages)
                 Children.Add(child);

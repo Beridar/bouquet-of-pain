@@ -60,6 +60,7 @@
     <Content Include="$(MSBuildThisFileDirectory)resources\4.0x\thrown_green_d6.png" />
     <Content Include="$(MSBuildThisFileDirectory)resources\5.0x\pummeled-no-background.png" />
     <Content Include="$(MSBuildThisFileDirectory)resources\5.0x\thrown_green_d6.png" />
+    <Content Include="$(MSBuildThisFileDirectory)resources\Originals\bouquet-of-pain-icon.png" />
     <Content Include="$(MSBuildThisFileDirectory)resources\Originals\pummeled-no-background.png" />
     <Content Include="$(MSBuildThisFileDirectory)resources\Originals\thrown_green_d6.png" />
   </ItemGroup>
